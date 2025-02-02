@@ -1,1 +1,1 @@
-# HNG-intership-stage0
+# HNG-internship-stage0
