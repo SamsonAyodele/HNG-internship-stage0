@@ -11,10 +11,20 @@ dotenv.config()
 const app: Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+app.use(cors({
+    origin: ["http://localhost:4000"],
+    methods: "GET",
+    allowedHeaders: "Content-Type,Authorization"
+  }));
+  
+
+
 app.use('/', router)
 
 
-app.use(cors({origin: "*"}));
+
 
 app.get('/', (req: Request, res: Response) => {
     try {
